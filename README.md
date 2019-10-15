@@ -18,6 +18,10 @@ A Reference for applying request library along with PyATS for Rest API Testing
     class RestConnector():
       def get(url, params={}, headers={}, proxies={})
       def post(url, params={}, headers={}, body={}, requestType="raw", proxies={})
+      
+pip install pyats
+
+pyats run job basic_example_job.py
 	    
 	    
 
