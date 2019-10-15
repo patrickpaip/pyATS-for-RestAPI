@@ -17,3 +17,4 @@ class DataConvertor():
 class RestConnector():
   def get(url, params={}, headers={}, proxies={})
   def post(url, params={}, headers={}, body={}, requestType="raw", proxies={})
+  
