@@ -13,7 +13,7 @@ import logging
 import requests
 # Needed for aetest script
 from pyats import aetest
-import reqlib
+import restconnector
 
 # Get your logger for your script
 log = logging.getLogger(__name__)
@@ -81,7 +81,8 @@ class tc_one(aetest.Testcase):
     # First test section
     @ aetest.test
     def simple_test_1(self):
-        result=reqlib.req_get("https://www.googsddsdddsdse.com",params={'a':'34'})
+        
+        result=restconnector.RestConnector().get("https://www.googsddsdddsdse.com",params={'a':'34'})
         print (result)
         if(result["err_code"]==1002):
             log.info("Endpoint not reachable.")
